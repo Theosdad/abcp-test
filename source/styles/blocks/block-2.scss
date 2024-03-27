@@ -1,0 +1,14 @@
+.block-2 {
+    background-color: #88b5bf;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    li {
+        max-width: 100%;
+        aspect-ratio: 1.275 / 1;
+        background-color: #0d89b0;
+    }
+}

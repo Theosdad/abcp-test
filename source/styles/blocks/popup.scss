@@ -1,0 +1,65 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    &__toggle {
+        display: none;
+    }
+
+    &__toggle:checked~.popup {
+        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+
+    &__content {
+        max-width: 400px;
+        min-height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-size: 53px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 43px;
+        height: 39px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #7faff6;
+        color: #ffffff;
+        font-size: 20px;
+
+        cursor: pointer;
+    }
+
+}

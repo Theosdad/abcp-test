@@ -1,0 +1,44 @@
+.block-1 {
+    background-color: #b3f95a;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+    counter-reset: list-counter;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        background-color: #8ad191;
+        font-size: 53px;
+        color: #ffffff;
+        padding: 68px 20px;
+
+        counter-increment: list-counter;
+
+        &:nth-child(1) {
+            flex-basis: 390px;
+        }
+
+        &:nth-child(2) {
+            flex-basis: 560px;
+        }
+
+        &:nth-child(4) {
+            flex-basis: 965px;
+        }
+
+        &:nth-child(2n+3) {
+            flex-basis: 160px;
+        }
+
+        &::before {
+            content: counter(list-counter);
+        }
+    }
+}
